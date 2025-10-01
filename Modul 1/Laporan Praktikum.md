@@ -63,7 +63,7 @@ int main(){
 Pertama, program akan meminta input berupa jumlah pembelian, kemudian menyimpannya ke dalam variabel `total_pembelian`. Setelah itu, program melakukan pengecekan dengan menggunakan struktur **if-else**.
 
 **Output**
-![]![[Modul 1 Ss.png]]
+ ![[Modul 1 Ss.png]]
 
 
   
@@ -102,7 +102,7 @@ int main(){
 Pertama, program mendeklarasikan dua variabel dengan tipe `float`, yaitu `celcius` untuk menampung input dari pengguna dan `fahrenheit` untuk menyimpan hasil konversi. Selanjutnya, program menampilkan pesan ke layar untuk meminta pengguna memasukkan suhu dalam Celcius, lalu membaca input tersebut menggunakan `cin`. Setelah nilai Celcius diperoleh, program menghitung konversinya ke Fahrenheit
 
 **Output**
-![[Modul 1 Ss Guided 2.png]]
+ ![[Modul 1 Ss Guided 2.png]]
 
   
 
@@ -141,7 +141,7 @@ int main(){
 
 **Output**
 
-![[Modul 1 Ss Guided 3.png]]
+ ![[Modul 1 Ss Guided 3.png]]
   
 
 ## 5. Unguided
@@ -202,7 +202,7 @@ Setelah pengguna memberikan input, program langsung menghitung dan menampilkan h
 Khusus untuk operasi pembagian, program menggunakan struktur **if-else** agar tidak terjadi kesalahan ketika membagi dengan nol. Jika nilai `b` tidak sama dengan nol, maka hasil pembagian `a / b` akan ditampilkan. Tetapi jika nilai `b` adalah nol, program akan menampilkan pesan bahwa pembagian tidak bisa dilakukan.
 
 **Output** 
-![[modul 1 Ss unguided1.png]]
+ ![[modul 1 Ss unguided1.png]]
 
   
 
@@ -279,7 +279,7 @@ int main() {
 **Penjelasan :**  Program ini berfungsi untuk mengubah angka yang dimasukkan pengguna menjadi bentuk tulisan dalam bahasa Indonesia dengan rentang 0 sampai 100. Pertama, program mendefinisikan dua buah array string, yaitu satuan yang menyimpan kata untuk angka 0 sampai 9, dan belasan yang menyimpan kata untuk angka 10 sampai 19. Setelah itu, program meminta pengguna memasukkan sebuah angka, lalu angka tersebut diproses menggunakan struktur percabangan if-else. Jika angka kurang dari 10, program langsung menampilkan kata dari array satuan. Jika angka berada di antara 10 sampai 19, program menampilkan kata dari array belasan dengan indeks yang disesuaikan. Untuk angka 20 sampai 99, program akan membagi angka dengan 10 untuk mendapatkan nilai puluhan, lalu menampilkannya dengan tambahan kata "puluh". Jika angka tersebut tidak bulat puluhan, maka sisa bagi 10 akan digunakan untuk menampilkan satuannya. Jika angka yang dimasukkan adalah 100, maka program langsung menampilkan "seratus". Sedangkan jika angka yang dimasukkan berada di luar rentang 0 sampai 100, program akan menampilkan pesan "eror!".
 
 **Output**
-![[modul 1 Ss unguided2.png]]
+ ![[modul 1 Ss unguided2.png]]
 
   
 
