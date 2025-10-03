@@ -16,7 +16,7 @@ void beriNilaiBonus(float &nilai) {
 }
 
 int main() {
-    string namaSiswa = "Budi";
+    string namaSiswa = "Rizki";
     int tugas = 80, uts = 90;
 
     float nilaiAkhir = hitungRataRata(tugas, uts);
