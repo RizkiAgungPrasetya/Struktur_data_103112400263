@@ -30,6 +30,12 @@ int main(){
     tail->next = curr;
     tail = curr;
 
+    curr = new charML;
+    curr->nama = "julian";
+    curr->next = NULL;
+    tail->next = curr;
+    tail = curr;
+
     cout << "Nama Hero ML:" << endl;
     curr = head;
     while(curr != NULL){
