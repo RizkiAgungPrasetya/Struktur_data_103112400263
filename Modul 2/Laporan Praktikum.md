@@ -136,7 +136,8 @@ int main() {
 ```
 
 
-**Penjelasan :** Program ini digunakan untuk menghitung dan menampilkan nilai seorang siswa sebelum dan sesudah mendapat bonus. Pertama, fungsi hitungRataRata() menghitung nilai rata-rata dari nilai tugas dan UTS dengan rumus (nilaiTugas + nilaiUTS) / 2.0f. Lalu, fungsi cetakProfil() menampilkan nama siswa dan nilai yang diperoleh ke layar. Fungsi beriNilaiBonus() menambah nilai siswa sebesar 5 menggunakan parameter referensi (float& nilai), sehingga perubahan nilai langsung berpengaruh pada variabel aslinya. Di dalam fungsi main(), nama siswa diset ke "Rizki" dengan nilai tugas 80 dan UTS 90. Program menghitung nilai rata-rata, menampilkan profil awal, kemudian memberikan bonus 5 poin, dan terakhir menampilkan profil siswa setelah mendapat bonus.
+**Penjelasan :** 
+Program ini digunakan untuk menghitung dan menampilkan nilai seorang siswa sebelum dan sesudah mendapat bonus. Pertama, fungsi hitungRataRata() menghitung nilai rata-rata dari nilai tugas dan UTS dengan rumus (nilaiTugas + nilaiUTS) / 2.0f. Lalu, fungsi cetakProfil() menampilkan nama siswa dan nilai yang diperoleh ke layar. Fungsi beriNilaiBonus() menambah nilai siswa sebesar 5 menggunakan parameter referensi (float& nilai), sehingga perubahan nilai langsung berpengaruh pada variabel aslinya. Di dalam fungsi main(), nama siswa diset ke "Rizki" dengan nilai tugas 80 dan UTS 90. Program menghitung nilai rata-rata, menampilkan profil awal, kemudian memberikan bonus 5 poin, dan terakhir menampilkan profil siswa setelah mendapat bonus.
 
 **Output**
 
