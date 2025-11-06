@@ -1,131 +1,29 @@
+#include "stack.h"
 #include <iostream>
-#define Nil NULL
-
 using namespace std;
 
-typedef int infotype;
-typedef struct elmlist *address;
-
-struct elmlist {
-    infotype info;
-    address next;
-    address prev;
-};
-
-struct List {
-    address first;
-    address last;
-};
-
-address alokasi(infotype x) {
-    address P = new elmlist;
-    P->info = x;
-    P->next = Nil;
-    P->prev = Nil;
-    return P;
-}
-
-void insertFirst(List &L, address P) {
-    P->next = L.first;
-    P->prev = Nil;
-    if (L.first != Nil)
-        L.first->prev = P;
-    else
-        L.last = P;
-    L.first = P;
-}
-
-void insertLast(List &L, address P) {
-    P->prev = L.last;
-    P->next = Nil;
-    if (L.last != Nil)
-        L.last->next = P;
-    else
-        L.first = P;
-    L.last = P;
-}
-
-void insertAfter(List &L, address P, address R) {
-    P->next = R->next;
-    P->prev = R;
-    if (R->next != Nil)
-        R->next->prev = P;
-    else
-        L.last = P;
-    R->next = P;
-}
-
-void insertBefore(List &L, infotype X, infotype sebelum) {
-    address Q = L.first;
-    while (Q != Nil && Q->info != sebelum) {
-        Q = Q->next;
-    }
-
-    if (Q == Nil) {
-        cout << "Elemen " << sebelum << " tidak ditemukan!\n";
-        return;
-    }
-
-    address P = alokasi(X);
-
-    if (Q == L.first) {
-        insertFirst(L, P);
-    } else {
-        P->prev = Q->prev;
-        P->next = Q;
-        Q->prev->next = P;
-        Q->prev = P;
-    }
-
-    cout << "Berhasil insert " << X << " sebelum " << sebelum << endl;
-}
-
-void printForward(List L) {
-    address P = L.first;
-    while (P != Nil) {
-        cout << P->info << " ";
-        P = P->next;
-    }
-    cout << endl;
-}
-
-void printReverse(List L) {
-    address P = L.last;
-    while (P != Nil) {
-        cout << P->info << " ";
-        P = P->prev;
-    }
-    cout << endl;
-}
-
 int main() {
-    List L;
-    L.first = Nil;
-    L.last = Nil;
+    cout << "Hello World!" << endl;
+    Stack S;
+    CreateStack(S);
 
-    cout << "TASK 1: INSERT OPERATIONS" << endl;
+    // Operasi stack
+    Push(S, 3);
+    Push(S, 4);
+    Push(S, 8);
+    Pop(S);
+    Push(S, 2);
+    Push(S, 3);
+    Pop(S);
+    Push(S, 9);
 
-    address P1 = alokasi(1);
-    insertFirst(L, P1);
-    address P2 = alokasi(2);
-    insertLast(L, P2);
-    address P3 = alokasi(3);
-    insertAfter(L, P3, P1);
+    cout << "Stack sebelum dibalik:" << endl;
+    printInfo(S);
 
-    cout << "List awal:" << endl;
-    cout << "Forward: ";
-    printForward(L);
-    cout << "Backward: ";
-    printReverse(L);
+    balikStack(S);
 
-    insertBefore(L, 4, 2);
-    insertBefore(L, 5, 1);
-
-    cout << "List setelah insertBefore:" << endl;
-    cout << "Forward: ";
-    printForward(L);
-    cout << "Backward: ";
-    printReverse(L);
+    cout << "Stack sesudah dibalik:" << endl;
+    printInfo(S);
 
     return 0;
 }

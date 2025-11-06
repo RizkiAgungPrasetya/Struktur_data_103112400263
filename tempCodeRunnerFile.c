@@ -1,30 +1,24 @@
-#ifndef SLL_N
-#define SLL_N
+#ifndef STACK_H
+#define STACK_H
 
-struct Node {
-    int data;
-    Node* next;
+#include <iostream>
+#define MaxEL 20
+#define NIL -1
+
+typedef int infotype;
+
+struct stack
+{
+    infotype info[MaxEL];
+    int top;
 };
 
-struct SLL {
-    Node* head;
-};
-
-//Konstruktor
-void Createlist(SLL &L);
-
-//Predikat
-bool IsEmpty(SLL L);
-
-//Primitif
-void InsertFirst(SLL &L, int x);
-void InsertLast(SLL &L, int x);
-void InsertAfter(Node* prevNode, int x);
-
-void DeleteFirst(SLL &L);
-void DeleteLast(SLL &L);
-void DeleteAfter(Node* prevNode);
-
-void ViewList(SLL L);
+void CreateStack(Stack &s);
+bool isEmpty(Stack s);
+bool isFull(Stack s);
+void Push(Stack &s, infotype x);
+infotype Pop(Stack &s);
+void printInfo(Stack s);
+void balikStack(Stack s);
 
 #endif
