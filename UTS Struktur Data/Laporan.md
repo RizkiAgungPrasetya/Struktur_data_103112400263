@@ -2,6 +2,8 @@ UJIAN TENGAH SEMESTER
 PRAKTIKUM STRUKTUR DATA
 CLO 3
 
+SOAL NO 1 NIM GANJIL
+
 Identitas Pengumpul
 
 Nama: Rizki Agung Prasetya
