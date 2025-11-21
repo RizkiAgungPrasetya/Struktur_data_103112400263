@@ -1,3 +1,9 @@
+//Author : Rizki Agung Prasetya
+//NIM : 103112400263
+//Deskripsi : Kode ini mengimplementasikan Single Linked List untuk menyimpan daftar nama 
+//(bertipe string). Setiap elemen (Node) dalam list memiliki data nama dan pointer
+//next yang menunjuk ke elemen
+
 #include <iostream>
 using namespace std;
 
