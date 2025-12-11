@@ -1,6 +1,4 @@
 #include "multilist.h"
-#include <iostream>
-using namespace std;
 
 address_anak alokasiAnak(infotype x) {
     address_anak P = new elemen_anak;
@@ -10,26 +8,51 @@ address_anak alokasiAnak(infotype x) {
     return P;
 }
 
-void insertLastAnak(list_anak &LA, address_anak PA) {
+void insertFirstAnak(list_anak &LA, address_anak PA) {
     if (LA.first == Nil) {
         LA.first = PA;
         LA.last = PA;
     } else {
-        LA.last->next = PA;
+        PA->next = LA.first;
+        LA.first->prev = PA;
+        LA.first = PA;
+    }
+}
+
+void insertLastAnak(list_anak &LA, address_anak PA) {
+    if (LA.first == Nil) {
+        insertFirstAnak(LA, PA);
+    } else {
         PA->prev = LA.last;
+        LA.last->next = PA;
         LA.last = PA;
     }
 }
 
-void printInfo(list_induk L) {
-    address_induk PI = L.first;
-    while (PI != Nil) {
-        cout << "Induk: " << PI->info << endl;
-        address_anak PA = PI->anak.first;
-        while (PA != Nil) {
-            cout << "  Anak: " << PA->info << endl;
-            PA = PA->next;
+void deleteFirstAnak(list_anak &LA, address_anak &PA) {
+    if (LA.first != Nil) {
+        PA = LA.first;
+        if (LA.first == LA.last) {
+            LA.first = Nil;
+            LA.last = Nil;
+        } else {
+            LA.first = LA.first->next;
+            LA.first->prev = Nil;
+            PA->next = Nil;
         }
-        PI = PI->next;
+    }
+}
+
+void deleteLastAnak(list_anak &LA, address_anak &PA) {
+    if (LA.first != Nil) {
+        PA = LA.last;
+        if (LA.first == LA.last) {
+            LA.first = Nil;
+            LA.last = Nil;
+        } else {
+            LA.last = LA.last->prev;
+            LA.last->next = Nil;
+            PA->prev = Nil;
+        }
     }
 }
