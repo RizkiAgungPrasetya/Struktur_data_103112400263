@@ -7,7 +7,7 @@ void createGraph(Graph &G) {
 adrNode allocateNode(infoGraph X) {
     adrNode P = new ElmNode;
     P->info = X;
-    P->visited = false;
+    P->visited = false; 
     P->firstEdge = NULL;
     P->next = NULL;
     return P;

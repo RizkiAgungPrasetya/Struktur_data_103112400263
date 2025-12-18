@@ -1,6 +1,6 @@
 #include "graph.h"
 
-adrNode findNode(Graph G, infoGraph X) {
+adrNode findNode(Graph &G, infoGraph X) {
     adrNode P = G.first;
     while (P != NULL) {
         if (P->info == X) return P;
@@ -9,14 +9,19 @@ adrNode findNode(Graph G, infoGraph X) {
     return NULL;
 }
 
-void connectNode(Graph &G, infoGraph start, infoGraph end) {
-    adrNode pStart = findNode(G, start);
-    adrNode pEnd = findNode(G, end);
+void connectNode(Graph &G, infoGraph N1, infoGraph N2) {
+    adrNode p1 = findNode(G, N1);
+    adrNode p2 = findNode(G, N2);
 
-    if (pStart != NULL && pEnd != NULL) {
-        adrEdge newEdge = new ElmEdge;
-        newEdge->node = pEnd;
-        newEdge->next = pStart->firstEdge; // Insert First di list Edge
-        pStart->firstEdge = newEdge;
+    if (p1 != NULL && p2 != NULL) {
+        adrEdge e1 = new ElmEdge;
+        e1->node = p2;
+        e1->next = p1->firstEdge;
+        p1->firstEdge = e1;
+
+        adrEdge e2 = new ElmEdge;
+        e2->node = p1;
+        e2->next = p2->firstEdge;
+        p2->firstEdge = e2;
     }
-} 
+}

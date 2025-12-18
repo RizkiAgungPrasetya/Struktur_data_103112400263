@@ -7,13 +7,11 @@ int main() {
     Graph G;
     createGraph(G);
 
-    // Menambahkan Node A, B, C, D
     insertNode(G, 'A');
     insertNode(G, 'B');
     insertNode(G, 'C');
     insertNode(G, 'D');
 
-    // Menghubungkan Node (Sesuai contoh materi)
     connectNode(G, 'A', 'B'); // A ke B
     connectNode(G, 'A', 'C'); // A ke C
     connectNode(G, 'B', 'D'); // B ke D
